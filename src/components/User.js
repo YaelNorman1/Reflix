@@ -1,5 +1,6 @@
-import React, { Component,  Link} from "react";
-// import { Link } from 'react-router-dom'
+import React, { Component} from "react";
+import { Link } from 'react-router-dom';
+import '../style/User.css'
 
 
 
@@ -21,18 +22,18 @@ class User extends Component {
 
         return(
                 <div className="col-md-3 mt-4">
-                    {/* <Link to="/catalog"> */}
-                    <div className="card user-info rounded" onClick={this.saveUserThatClicked}>
-                        <div className="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                            <img src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes.png" className="card-img img-fluid"/>
-                            <a href="#!">
-                                <div className="mask" ></div>
-                            </a>
-                            <span>{userInfo.name}</span>
+                    <Link to="/catalog"> 
+                        <div className="card user-info rounded" onClick={this.saveUserThatClicked}>
+                            <div className="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                                <img src={require("../img/temp-user.png")} className="card-img img-fluid"/>
+                                <a href="#!">
+                                    <div className="mask" ></div>
+                                </a>
+                                <span>{userInfo.name}</span>
+                            </div>
+                            
                         </div>
-                        
-                    </div>
-                    {/* </Link> */}
+                    </Link>
                 </div>
         )
     }

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import '../style/Navbar.css'
+
 
 class Navbar extends Component {
   
@@ -15,7 +17,7 @@ class Navbar extends Component {
                         <Link className="nav-link" to="/catalog">Catalog</Link>
                     </li>
                 </ul>
-                <img src={require("../img/reflix-logo.png")} className="ms-auto mr-10 img-fluid"/>
+                <img src={require("../img/reflix-logo.png")} className="logo ms-auto mr-10 img-fluid"/>
             </nav>
         </div>
         )
