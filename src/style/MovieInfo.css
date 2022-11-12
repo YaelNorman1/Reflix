@@ -1,0 +1,18 @@
+.card.movie-info{
+    width: 20rem;
+    height: auto;
+    border-radius: 2em;
+    box-shadow: 10px 10px 10px 10px rgba(.5,.5,.5,.5);
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+    background-color: #EEEEEE;
+}
+
+.mask {
+    background-color: rgba(251, 251, 251, 0.15);
+}
+
+.card-text{
+    text-align: center;
+}

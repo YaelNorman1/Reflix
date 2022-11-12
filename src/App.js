@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import Catalog from "./components/Catalog";
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
+import MovieInfo from "./components/MovieInfo";
 
 
 
@@ -129,6 +130,10 @@ class App extends Component {
     this.setState({loginUser: currentUser})
   }
 
+  getMovieById= match =>{
+    return this.state.movies.find(movie => movie["id"] === parseInt(match.params.id))
+  }
+
 
   render () {
     return (
@@ -137,6 +142,7 @@ class App extends Component {
           <Navbar/>
           <Route exact path="/" render={() => <Home users={this.state.users} getSelectedUser={this.getSelectedUser}/>}/>
           <Route exact path="/catalog" render={() => <Catalog loginUser={this.state.loginUser} movies={this.state.movies}/>}/>
+          <Route exact path="/movies/:id" render={({ match }) => <MovieInfo movie={this.getMovieById(match)}/>}/>
         </div>
       </Router>
     );
