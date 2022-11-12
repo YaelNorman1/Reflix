@@ -31,7 +31,6 @@ class User extends Component {
                                 </a>
                                 <span>{userInfo.name}</span>
                             </div>
-                            
                         </div>
                     </Link>
                 </div>
