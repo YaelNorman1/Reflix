@@ -10,9 +10,9 @@ class Catalog extends Component {
         return (
         <div>
             <LoginUser loginUser={this.props.loginUser}/>
-            <h3>Rented Movies</h3>
+            <h5>Rented Movies</h5>
             <MovieList movies= {this.props.movies.filter(movie => movie.isRented)}/>
-            <h3>All Movies</h3>
+            <h5>All Movies</h5>
             <MovieList movies= {this.props.movies.filter(movie => !movie.isRented)}/>
             
 

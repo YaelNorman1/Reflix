@@ -133,7 +133,7 @@ class App extends Component {
   render () {
     return (
       <Router>
-        <div className="App">
+        <div className="App container">
           <Navbar/>
           <Route exact path="/" render={() => <Home users={this.state.users} getSelectedUser={this.getSelectedUser}/>}/>
           <Route exact path="/catalog" render={() => <Catalog loginUser={this.state.loginUser} movies={this.state.movies}/>}/>

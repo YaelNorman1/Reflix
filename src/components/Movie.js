@@ -14,11 +14,11 @@ export default class Movie extends Component {
             <Col>
                 <div className="card rounded movie-info mt-2" onClick={this.showMovieInfo}>
                     <div className="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                        <img src={movie.img} className="card-img img-fluid"/>
+                        <img src={movie.img} className="card-img-top"/>
                         <a href="#!">
                             <div className="mask" ></div>
                         </a>
-                        <span>{movie.name}</span>
+                        {/* <span>{movie.title}</span> */}
                     </div>
                 </div>
            </Col>

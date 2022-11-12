@@ -22,10 +22,10 @@ class User extends Component {
 
         return(
                 <div className="col-md-3 mt-4">
-                    <Link to="/catalog"> 
+                    <Link to="/catalog" className="remove-link-design"> 
                         <div className="card user-info rounded" onClick={this.saveUserThatClicked}>
                             <div className="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                                <img src={require("../img/temp-user.png")} className="card-img img-fluid"/>
+                                <img src={require("../img/temp-user-removebg-preview.png")} className="card-img img-fluid"/>
                                 <a href="#!">
                                     <div className="mask" ></div>
                                 </a>

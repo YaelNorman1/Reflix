@@ -7,8 +7,8 @@ class LoginUser extends Component {
 
         return(
         <div>
-            <h3>Hello {this.props.loginUser.name}</h3>
-            <h6>Budget: {this.props.loginUser.budget}$</h6>
+            <h3 id="greet-user">Hello {this.props.loginUser.name} :)</h3>
+            <h6 id="budget-user">Budget: {this.props.loginUser.budget}$</h6>
             
         </div>) 
     }
