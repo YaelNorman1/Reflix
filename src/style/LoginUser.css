@@ -1,0 +1,11 @@
+#greet-user{
+    /* display:flex; */
+    text-align: center;
+    font-size: large;
+
+}
+
+h6{
+    text-align: right;
+    /* display:inline; */
+}

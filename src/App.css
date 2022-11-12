@@ -1,8 +1,13 @@
-/* .App {
-  text-align: center;
-} */
 
-.App-logo {
+
+body{
+  background-image: url('./img/imageedit_1_6470340561.png');
+  height: 100%;
+  background-size: cover;
+  
+}
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,10 +40,10 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
 
 
-.mask {
+/* .mask {
   background-color: rgba(251, 251, 251, 0.15);
 }
 
@@ -48,4 +53,4 @@
   box-shadow: 10px 10px 10px 10px rgba(0,0,0,.1);
   text-align: center;
 
-}
+} */

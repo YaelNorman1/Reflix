@@ -1,0 +1,12 @@
+.logo {
+    width: 200px;
+}
+
+.navbar {
+    color: rgba(255, 0, 0, 0.5);
+}
+
+.nav-item{
+    color: black;
+    font-size: 25px;
+}
