@@ -134,6 +134,14 @@ class App extends Component {
     return this.state.movies.find(movie => movie["id"] === parseInt(match.params.id))
   }
 
+  changeRentedStatus= (movieId) => {
+    const newMovieCatalog= [...this.state.movies]
+    const newMovie= newMovieCatalog.find(movie => movie["id"] === movieId);
+    newMovie.isRented=!newMovie.isRented
+    this.setState({movies: newMovieCatalog})
+
+  }
+
 
   render () {
     return (
@@ -141,7 +149,7 @@ class App extends Component {
         <div className="App container">
           <Navbar/>
           <Route exact path="/" render={() => <Home users={this.state.users} getSelectedUser={this.getSelectedUser}/>}/>
-          <Route exact path="/catalog" render={() => <Catalog loginUser={this.state.loginUser} movies={this.state.movies}/>}/>
+          <Route exact path="/catalog" render={() => <Catalog loginUser={this.state.loginUser} movies={this.state.movies} changeRentedStatus={this.changeRentedStatus}/>}/>
           <Route exact path="/movies/:id" render={({ match }) => <MovieInfo movie={this.getMovieById(match)}/>}/>
         </div>
       </Router>

@@ -11,10 +11,10 @@ class Catalog extends Component {
         <div>
             <LoginUser loginUser={this.props.loginUser}/>
             <h5>Rented Movies</h5>
-            <MovieList movies= {this.props.movies.filter(movie => movie.isRented)}/>
+            <MovieList movies= {this.props.movies.filter(movie => movie.isRented)} changeRentedStatus={this.props.changeRentedStatus}/>
             <hr/>
             <h5>All Movies</h5>
-            <MovieList movies= {this.props.movies.filter(movie => !movie.isRented)}/>
+            <MovieList movies= {this.props.movies.filter(movie => !movie.isRented)} changeRentedStatus={this.props.changeRentedStatus}/>
             
 
         </div>)
