@@ -9,7 +9,6 @@ class LoginUser extends Component {
         <div>
             <h3 id="greet-user">Hello {this.props.loginUser.name} :)</h3>
             <h6 id="budget-user">Budget: {this.props.loginUser.budget}$</h6>
-            
         </div>) 
     }
 }

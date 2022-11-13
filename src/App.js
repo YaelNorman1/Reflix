@@ -6,6 +6,7 @@ import Catalog from "./components/Catalog";
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import MovieInfo from "./components/MovieInfo";
+import MOVIE_PRICE from './utils/consts.js';
 
 
 
@@ -19,7 +20,7 @@ class App extends Component {
               { id : 1 , name: "B", budget: 101, img: "blue"},
               { id : 2 , name: "C", budget: 102, img: "green"},
               { id : 3 , name: "D", budget: 103, img: "orange"}],
-      loginUser: {},
+      loginUser: {id : 0 , name: "A", budget: 100, img: "red"},
       movies: [
         {
             id: 0,
@@ -134,10 +135,30 @@ class App extends Component {
     return this.state.movies.find(movie => movie["id"] === parseInt(match.params.id))
   }
 
+  updateRentedAndBudget(movie){
+    const loginUserId= this.state.loginUser.id;
+    const user = this.state.users.find(user => user.id === loginUserId);
+    
+    if (this.payOrCreditMovie(user, movie))
+      movie.isRented=!movie.isRented;
+    else
+      alert("Can't buy another movie!")
+  }
+
+  payOrCreditMovie(user, movie){
+    if (movie.isRented)
+      user.budget=  user.budget + MOVIE_PRICE;
+    else if (user.budget >= MOVIE_PRICE)
+      user.budget=  user.budget - MOVIE_PRICE;
+    else 
+      return false
+    return true
+  }
+
   changeRentedStatus= (movieId) => {
     const newMovieCatalog= [...this.state.movies]
     const newMovie= newMovieCatalog.find(movie => movie["id"] === movieId);
-    newMovie.isRented=!newMovie.isRented
+    this.updateRentedAndBudget(newMovie);
     this.setState({movies: newMovieCatalog})
 
   }

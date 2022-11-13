@@ -8,11 +8,11 @@ export default class MovieList extends Component {
 
     render() {
         return (
-                <Row>
-                    {this.props.movies.map(movie => {
-                        return <Movie movie={movie} changeRentedStatus={this.props.changeRentedStatus}/>
-                    })}
-                </Row>
+            <Row>
+                {this.props.movies.map(movie => {
+                    return <Movie movie={movie} changeRentedStatus={this.props.changeRentedStatus}/>
+                })}
+            </Row>
 
         )
     }
