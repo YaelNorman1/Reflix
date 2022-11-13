@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
-import { Col } from 'react-bootstrap'
+import { Card, Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 import '../style/Movie.css'
+import AddMovieBtn from './AddMovieBtn';
+import RemoveMovieBtn from './RemoveMovieBtn';
 
 export default class Movie extends Component {
     showMovieInfo(){
@@ -13,19 +15,14 @@ export default class Movie extends Component {
         const movie= this.props.movie;
         return (
             <Col>
-                <div className="card rounded movie-info mt-2" onClick={this.showMovieInfo}>
-                    <div className="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                        {/* <button type="button" className="btn btn-primary btn-floating fa-download">
-                            <i className="bi-plus"></i>
-                        </button> */}
-                        <Link to={`/movies/${movie.id}`}>
-                            <img src={movie.img} className="card-img-top"/>
-                            <a href="#!">
-                                <div className="mask" ></div>
-                            </a>
-                        </Link>
-                    </div>
-                </div>
+                <Card className="rounded movie-info mt-2" onClick={this.showMovieInfo}>
+                    <Link to={`/movies/${movie.id}`}>
+                        <Card.Img src={movie.img} className= "card-img-top" alt="Card image" />
+                        <Card.ImgOverlay>
+                            {movie.isRented? <RemoveMovieBtn changeRentedStatus={this.props.changeRentedStatus} movieId={movie.id}/> : <AddMovieBtn changeRentedStatus={this.props.changeRentedStatus} movieId={movie.id}/>  }
+                        </Card.ImgOverlay>
+                    </Link>
+                </Card>
            </Col>
         )
     }

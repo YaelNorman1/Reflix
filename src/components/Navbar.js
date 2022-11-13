@@ -19,8 +19,7 @@ class Navbar extends Component {
                 </ul>
                 <img src={require("../img/reflix-low-resolution-logo-black-on-transparent-background.png")} className="logo ms-auto mr-10 img-fluid"/>
             </nav>
-        </div>
-        )
+        </div>)
   }
 }
 

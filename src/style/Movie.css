@@ -1,6 +1,7 @@
 .card.movie-info {
     width: 318px;
     border-radius: 2em;
+    height: 318px;
     box-shadow: 10px 10px 10px 10px rgba(0,0,0,.2);
     text-align: center;
     /* height: 100%; */
@@ -12,7 +13,7 @@
 }
 
 .card-img-top {
-    width: 318px;
+    width: 316px;
     height: 316px;
     border-radius: 10px 10px 10px 10px;
     /* object-fit: cover; */
